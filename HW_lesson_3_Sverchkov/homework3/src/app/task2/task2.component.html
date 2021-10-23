@@ -1,0 +1,32 @@
+<p>task2 works!</p>
+
+<!-- Создайте четыре тега input с типом radio. 
+     Каждый флаг отвечает за свой цвет, который должен задаваться на отдельный 
+     элемент в виде фона. К примеру: есть параграф и над ним размещены инпуты, 
+     при нажатии на первый - цвет параграфа становится синим, на второй - красным, 
+     третий - зеленым, четвертый - золотым.  
+-->
+
+
+<!-- <input type="radio" id="red" name = "color">
+<label for="red">Красный</label>
+<br>
+
+<input type="radio" id="blue" name = "color">
+<label for="blue">Синий</label>
+<br>
+
+<input type="radio" id="yellow" name = "color">
+<label for="yellow">Жёлтый</label>
+<br>
+
+<input type="radio" id="green" name = "color">
+<label for="green">Зелёный</label> -->
+
+<ng-container *ngFor = "let colorItem of colorsArray">
+     <input type = "radio" name = "color" id = "{{ colorItem }}" (change) = handleChange(colorItem)>
+     <label [textContent] = "colorItem | titlecase"></label>
+     <br>
+</ng-container>
+
+<p #text>Текст, задний фон которого меняется в соответствии с выбранным выше радио баттоном</p>

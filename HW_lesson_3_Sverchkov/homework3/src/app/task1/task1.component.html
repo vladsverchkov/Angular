@@ -1,0 +1,10 @@
+<p>task1 works!</p>
+
+<ul>
+    <li *ngFor = "let arr of arrText" (click) = "liPressed($event)">
+        {{ arr }}
+    </li>
+</ul>
+
+<p class = "result">Выбранный вами пункт содержит текст: {{this.chosenText}}</p>
+ 
