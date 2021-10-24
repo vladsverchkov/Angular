@@ -1,0 +1,9 @@
+.men-clothes {
+    border: 3px solid red;
+    margin-top: 20px;
+}
+
+.men-clothes > a {
+    font-weight: bold;
+    font-size: 20px;
+}
